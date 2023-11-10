@@ -75,7 +75,17 @@ const Sidebar: React.FC = () => {
             : "hover:bg-blue-500"
         }`}
       >
-        Car Approval
+        Duyệt xe
+      </Link>
+      <Link
+        to="/car-list"
+        className={`block py-2.5 px-4 rounded transition duration-200 ${
+          location.pathname === "/car-list"
+            ? "bg-blue-500"
+            : "hover:bg-blue-500"
+        }`}
+      >
+        Danh sách xe
       </Link>
 
       {user && (
