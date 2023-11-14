@@ -57,7 +57,7 @@ const Sidebar: React.FC = () => {
   };
 
   return (
-    <div className="h-screen  bg-gray-800 text-white w-64 space-y-6 px-4 py-7">
+    <div className="fixed overflow-auto h-screen  bg-gray-800 text-white w-64 space-y-6 px-4 py-7">
       <h1 className="text-2xl font-extrabold text-center">GoTraffic</h1>
       <Link
         to="/"
