@@ -67,8 +67,8 @@ const CarList: React.FC = () => {
 
   return (
     <div>
-      <div className="flex">
-        <div className="h-screen  bg-gray-200 text-gray-800 w-64 space-y-6 px-4 py-7">
+      <div className="flex ml-64">
+        <div className="fixed h-screen  bg-gray-200 text-gray-800 w-64 space-y-6 px-4 py-7">
           {cars.map((car) => (
             <div
               onClick={() => handleCarChoose(car)}
@@ -85,7 +85,7 @@ const CarList: React.FC = () => {
         </div>
         {selectedCar ? (
           <div className="flex-grow px-4">
-            <CarItem {...selectedCar} />
+            <CarItem car={selectedCar} isApprovalMode={false} />
           </div>
         ) : (
           <div className="flex-grow flex items-center justify-center min-h-screen bg-gray-100">
