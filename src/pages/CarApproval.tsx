@@ -51,7 +51,7 @@ const CarApproval = () => {
             <CarItem car={selectedCar} isApprovalMode={true} />
           </div>
         ) : (
-          <div className="flex-grow flex items-center justify-center min-h-screen bg-gray-100">
+          <div className="flex-grow flex items-center justify-center min-h-screen bg-gray-100 ml-64">
             <h1 className="text-2xl font-bold text-center text-gray-700">
               Chọn xe để duyệt
             </h1>
