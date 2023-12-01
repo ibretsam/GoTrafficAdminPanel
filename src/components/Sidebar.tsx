@@ -87,6 +87,16 @@ const Sidebar: React.FC = () => {
       >
         Danh sách xe
       </Link>
+      <Link
+        to="/user-list"
+        className={`block py-2.5 px-4 rounded transition duration-200 ${
+          location.pathname === "/user-list"
+            ? "bg-blue-500"
+            : "hover:bg-blue-500"
+        }`}
+      >
+        Danh sách người dùng
+      </Link>
 
       {user && (
         <div
