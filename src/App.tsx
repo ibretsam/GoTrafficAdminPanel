@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import CarApproval from "./pages/CarApproval";
 import CarList from "./pages/CarList";
+import UserList from "./pages/UserList";
 
 const MainLayout = () => (
   <div className="flex">
@@ -22,6 +23,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/car-approval" element={<CarApproval />} />
           <Route path="/car-list" element={<CarList />} />
+          <Route path="/user-list" element={<UserList />} />
         </Route>
         <Route path="/login" element={<Login />} />
       </Routes>
