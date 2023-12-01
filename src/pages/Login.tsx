@@ -1,5 +1,6 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { User } from "./UserList";
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
@@ -27,7 +28,8 @@ const Login: React.FC = () => {
         console.log(data);
         if (data.result || data.user) {
           localStorage.setItem("token", data.token);
-          localStorage.setItem("user", JSON.stringify(data.user));
+          const user: User = data.user;
+          localStorage.setItem("user", JSON.stringify(user));
           navigate("/");
         } else {
           alert(data.message);
