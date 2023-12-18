@@ -78,6 +78,22 @@ const Home: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("Tháng");
   const [revenueData, setRevenueData] = useState<number[]>([]);
   const [labels, setLabels] = useState<string[]>([]);
+  const [timeFrameString, setTimeFrameString] = useState<string>("");
+
+  useEffect(() => {
+    switch (activeTab) {
+      case "Tuần":
+      case "Tháng":
+        setTimeFrameString("ngày");
+        break;
+      case "Năm":
+      case "Toàn bộ":
+        setTimeFrameString("tháng");
+        break;
+      default:
+        break;
+    }
+  }, [activeTab]);
 
   useEffect(() => {
     fetch("http://103.57.129.166:3000/revenue/api/total-all-revenue")
@@ -194,15 +210,24 @@ const Home: React.FC = () => {
         </div>
         <div className="mt-10 flex justify-center">
           <h1 className="text-2xl font-bold mb-5 mr-10">
-            Doanh thu trung bình theo thời gian
+            Doanh thu trung bình theo {timeFrameString}
           </h1>
           <div className="ml-10">
             <p>Tổng doanh thu: {totalRevenue.toLocaleString("en-US")}</p>
             <p>
-              Trung bình hàng tháng: {monthlyAverage.toLocaleString("en-US")}
+              Trung bình hàng {timeFrameString}:{" "}
+              {monthlyAverage.toLocaleString("en-US")}
             </p>
-            <p>Tháng cao nhất: {highestMonth.toLocaleString("en-US")}</p>
-            <p>Tháng thấp nhất: {lowestMonth.toLocaleString("en-US")}</p>
+            <p>
+              {timeFrameString.charAt(0).toUpperCase() +
+                timeFrameString.slice(1)}{" "}
+              cao nhất: {highestMonth.toLocaleString("en-US")}
+            </p>
+            <p>
+              {timeFrameString.charAt(0).toUpperCase() +
+                timeFrameString.slice(1)}{" "}
+              thấp nhất: {lowestMonth.toLocaleString("en-US")}
+            </p>
           </div>
         </div>
       </div>
