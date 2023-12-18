@@ -10,19 +10,8 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import ChartDataLabels from "chartjs-plugin-datalabels";
-import {
-  Tabs,
-  TabsHeader,
-  TabsBody,
-  Tab,
-  TabPanel,
-} from "@material-tailwind/react";
-import {
-  getWeekNumber,
-  isThisMonth,
-  isThisWeek,
-  isThisYear,
-} from "../utils/helper";
+import { Tabs, TabsHeader, Tab } from "@material-tailwind/react";
+import { isThisMonth, isThisWeek, isThisYear } from "../utils/helper";
 
 ChartJS.register(
   CategoryScale,

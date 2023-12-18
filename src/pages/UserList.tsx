@@ -33,7 +33,6 @@ export interface User {
 
 const UserList: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);
-  const [selectedUser, setSelectedUser] = useState<User | null>(null);
 
   useEffect(() => {
     fetch("http://103.57.129.166:3000/user/api/list")
