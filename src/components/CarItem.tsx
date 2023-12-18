@@ -23,7 +23,7 @@ export const CarItem: React.FC<{ car: Car; isApprovalMode: boolean }> = ({
   let images = [];
   if (car.image) {
     try {
-      images = JSON.parse(car.image);
+      images = JSON.parse(car.image.slice(1, -1));
     } catch (error) {
       console.log(error);
       images.push(car.image);

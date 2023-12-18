@@ -31,7 +31,7 @@ const CarApproval = () => {
   return (
     <div>
       <div className="flex ml-64">
-        <div className="fixed h-screen  bg-gray-200 text-gray-800 w-64 space-y-6 px-4 py-7">
+        <div className="fixed h-screen  bg-gray-200 text-gray-800 w-64 space-y-6 px-4 py-7 overflow-auto">
           {cars.map((car) => (
             <div
               onClick={() => handleCarChoose(car)}

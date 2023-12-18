@@ -97,6 +97,26 @@ const Sidebar: React.FC = () => {
       >
         Danh sách người dùng
       </Link>
+      <Link
+        to="/send-notification"
+        className={`block py-2.5 px-4 rounded transition duration-200 ${
+          location.pathname === "/send-notification"
+            ? "bg-blue-500"
+            : "hover:bg-blue-500"
+        }`}
+      >
+        Gửi thông báo
+      </Link>
+      <Link
+        to="/money-withdrawal"
+        className={`block py-2.5 px-4 rounded transition duration-200 ${
+          location.pathname === "/notification-list"
+            ? "bg-blue-500"
+            : "hover:bg-blue-500"
+        }`}
+      >
+        Yêu cầu rút tiền
+      </Link>
 
       {user && (
         <div

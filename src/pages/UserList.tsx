@@ -48,8 +48,8 @@ const UserList: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex ml-64 justify-center mt-10">
-      <div className="fixed w-1/2">
+    <div className="flex flex-grow ml-64 justify-center mt-10 pb-14 px-16">
+      <div className="w-1/2 max-h-screen">
         <div className="px-4 sm:px-0">
           <h3 className="text-base font-semibold leading-7 text-gray-900">
             Thông tin người dùng
